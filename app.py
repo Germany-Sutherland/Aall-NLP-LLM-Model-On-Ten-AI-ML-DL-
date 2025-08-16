@@ -11,6 +11,15 @@
 # 1) Create a public GitHub repo with this `app.py` and a `requirements.txt` (see bottom of this file for contents).
 # 2) On streamlit.io → Deploy → point to your repo → select `app.py`.
 # 3) No secrets needed.
+# NLTK setup for free Streamlit
+import nltk
+nltk_packages = ["punkt", "stopwords"]
+
+for pkg in nltk_packages:
+    try:
+        nltk.data.find(f"tokenizers/{pkg}" if pkg == "punkt" else f"corpora/{pkg}")
+    except LookupError:
+        nltk.download(pkg)
 
 import os
 import sys
