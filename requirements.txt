@@ -1,0 +1,7 @@
+streamlit
+pandas
+requests
+pydeck
+matplotlib
+sumy
+nltk
